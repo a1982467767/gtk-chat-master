@@ -1,0 +1,20 @@
+GTK安装：http://www.cnblogs.com/niocai/archive/2011/07/15/2107472.html
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install devhelp
+sudo apt-get install libglib2.0-doc libgtk2.0-doc
+sudo apt-get install glade libglade2-dev
+
+安装GTK+3.0：sudo apt-get install libgtk-3-dev 
+
+数据库编译：g++ -o mydb chatdb.c -lmysqlclient -I/usr/include/mysql/ -L/usr/lib/mysql
+
+GTK编译：gcc -o gtkdm gtkdm.c `pkg-config --cflags --libs gtk+-2.0`
+
+
+mysql> create table message(
+    -> sender char(9) not null primary key,
+    -> reciver char(9) not null,
+    -> mes char(100) not null)
+    -> ;
+alter table message add havesend binary(1) default 0;
+
